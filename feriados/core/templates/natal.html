@@ -6,9 +6,9 @@
     </head>
     <body>
         {% if natal %}
-          <h1>É natal</h1>
+          <h1>Hoje é Natal, dia 25 de Dezembro</h1>
         {% else %}
-          <h1>Não é natal</h1>
+          <h1>Não é Natal</h1>
         {% endif %}
         <form method="post" action="{% url 'tiradentes' %}">
           {% csrf_token %}
