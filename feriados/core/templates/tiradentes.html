@@ -6,9 +6,13 @@
     </head>
     <body>
         {% if tiradentes %}
-          <h1>Hoje é dia de Tiradentes, 21 de abril</h1>
+          <h1>Hoje é dia de Tiradentes, 21 de Abril</h1>
         {% else %}
           <h1>Não é dia de Tiradentes</h1>
         {% endif %}
+        <form method="post" action="{% url 'natal' %}">
+          {% csrf_token %}
+          <input type="submit" value="Verificar o Feriado de Natal">
+        </form>
     </body>
 </html>
